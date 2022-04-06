@@ -18,7 +18,7 @@ namespace Vidly.Controllers
         {
             _context.Dispose();
         }
-        // GET: Customers
+
         public ActionResult Index()
         {
             var customers = _context.Customers.Include(c => c.MembershipType).ToList();
@@ -46,6 +46,7 @@ namespace Vidly.Controllers
 
             return View("CustomerForm", viewModel);
         }
+        
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
