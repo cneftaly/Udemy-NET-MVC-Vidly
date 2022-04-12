@@ -11,9 +11,12 @@ namespace Vidly
     {
         protected void Application_Start()
         {
+            // Para el funcionamiento de AutoMapper
             Mapper.Initialize(c => c.AddProfile<MappingProfile>());
+            
             // Se debe instalar el paquete Microsoft.AspNet.WebApi.WebHost
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

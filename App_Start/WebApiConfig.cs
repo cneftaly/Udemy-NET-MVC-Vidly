@@ -8,6 +8,7 @@ namespace Vidly
     {
         public static void Register(HttpConfiguration config)
         {
+            // Esto sirve para convertir el resultado en JSON a camelCase
             var settings = config.Formatters.JsonFormatter.SerializerSettings;
             settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             settings.Formatting = Formatting.Indented;

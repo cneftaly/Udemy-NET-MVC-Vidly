@@ -6,6 +6,7 @@ namespace Vidly.App_Start
 {
     public class MappingProfile: Profile
     {
+        // Esta clase se manda a llamar desde Global.asax
         public MappingProfile()
         {
             Mapper.CreateMap<Customer, CustomerDto>();
